@@ -1,0 +1,69 @@
+{
+    "core": {
+        "disabledPackages": [
+            "spell-check",
+            "autocomplete-webgl",
+            "editorconfig",
+            "open-in-browser",
+            "platformio-ide-terminal",
+            "trcek"
+        ],
+        "telemetryConsent": "no",
+        "uriHandlerRegistration": "always"
+    },
+    "editor": {
+        "showIndentGuide": true
+    },
+    "exception-reporting": {
+        "userId": "38978d05-f39e-4d3d-ae58-32fcc013b0cb"
+    },
+    "foldername-tabs": {
+        "debug": 1,
+        "filenameFirst": true,
+        "maxLength": 0
+    },
+    "linter-ui-default": {
+        "panelHeight": 300
+    },
+    "new-tab": {
+        "position": "Center"
+    },
+    "sync-settings": {},
+    "tab-foldername-index": {},
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "sync.gist": "300102ee2efc39da23e80cdbc5196cce",
+    "git.autofetch": true,
+    "window.zoomLevel": 0,
+    "settingsSync.ignoredExtensions": [],
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "beautify.ignore": "",
+    "vim.smartRelativeLine": true,
+    "workbench.iconTheme": "vscode-icons",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "editor.suggest.showStatusBar": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.enablePreview": false,
+    "typescript.tsdk": "",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
