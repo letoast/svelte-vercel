@@ -3,7 +3,13 @@ image: gitpod/workspace-full
 tasks:
   - before: npm install -g vercel
     init: npm install && npm run build
-    command: npm run start
+    command: |
+      export CLIENT_URL="$(gp url 35729)/livereload.js?snipver=1&port=443"
+      npm run start
 
 ports:
   - port: 5000
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode@102.1.0:lalX6WJBrpvP8QKZTiLUmQ==
