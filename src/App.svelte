@@ -1,8 +1,9 @@
-<script lang="ts">
+<script>
   import ApolloClient, { gql } from "apollo-boost";
+  import { fetch } from "cross-fetch";
   import { onMount } from "svelte";
 
-const apiURL = "api";
+  const apiURL = "api";
   const projectsQuery = gql`
     query GetProjectsData {
       projects {
@@ -26,26 +27,20 @@ const apiURL = "api";
     }
   `;
 
-  async function preload({ params, query }) {
-    const client = new ApolloClient({
-      uri: "http://172.104.238.194:1337/graphql",
-      fetch: this.fetch,
-    });
-    const results = await client.query({
+  let projects = [];
+
+  const client = new ApolloClient({
+    uri: "http://172.104.238.194:1337/graphql",
+    fetch: fetch,
+  });
+
+  onMount(async () => {
+    let results = await client.query({
       query: projectsQuery,
       fetchPolicy: "no-cache",
     });
-    return { projects: results.data.projects };
-  }
-
-//   export let date: date;
-
-//   onMount(async () => {
-//     const res = await fetch("/api/date");
-//     const newDate = await res.text();
-//     date = newDate;
-//   });
-
+    projects = results.data.projects;
+  });
 </script>
 
 <main>
@@ -53,9 +48,7 @@ const apiURL = "api";
   <h2>The date according to Node.js is:</h2>
   <!-- <p>{date ? date : 'Loading date...'}</p> -->
 
-{ await preload then _}
-{#each projects as project}
-  <h1>{project.title}</h1>
-{/each}
-{/await}
+  {#each projects as project}
+        <h1>{project.title}</h1>
+    {/each}
 </main>
