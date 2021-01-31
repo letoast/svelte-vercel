@@ -30,7 +30,7 @@
   let projects = [];
 
   const client = new ApolloClient({
-    uri: "http://172.104.238.194:1337/graphql",
+    uri: "https://ciriltrcek.com/graphql",
     fetch: fetch,
   });
 
@@ -49,6 +49,6 @@
   <!-- <p>{date ? date : 'Loading date...'}</p> -->
 
   {#each projects as project}
-        <h1>{project.title}</h1>
+        <h2>{project.title}</h2>
     {/each}
 </main>
